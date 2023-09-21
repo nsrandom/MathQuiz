@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     VStack {
-      QuestionView(question: Question.randomAddition())
+      QuizView(questions: Question.questionBank())
     }
     .padding()
   }

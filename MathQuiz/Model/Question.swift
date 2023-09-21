@@ -43,3 +43,14 @@ extension Question {
     return Question(lhs: lhs, rhs: rhs, text: "\(lhs) ÷ \(rhs)", answer: (lhs/rhs))
   }
 }
+
+extension Question {
+  static func questionBank() -> [Question] {
+    return [
+      randomAddition(),
+      randomSubtraction(),
+      randomMultiplication(),
+      randomDivision()
+    ]
+  }
+}
