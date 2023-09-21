@@ -14,6 +14,10 @@
 		098AAAA92ABC73CD003047B0 /* MathQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAA82ABC73CD003047B0 /* MathQuizTests.swift */; };
 		098AAAB32ABC73CD003047B0 /* MathQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAB22ABC73CD003047B0 /* MathQuizUITests.swift */; };
 		098AAAB52ABC73CD003047B0 /* MathQuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAB42ABC73CD003047B0 /* MathQuizUITestsLaunchTests.swift */; };
+		098AAAC32ABC7434003047B0 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAC22ABC7434003047B0 /* QuestionView.swift */; };
+		098AAAC42ABC7434003047B0 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAC22ABC7434003047B0 /* QuestionView.swift */; };
+		098AAAC72ABC744C003047B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAC62ABC744C003047B0 /* Question.swift */; };
+		098AAAC82ABC744C003047B0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAC62ABC744C003047B0 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		098AAAAE2ABC73CD003047B0 /* MathQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		098AAAB22ABC73CD003047B0 /* MathQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizUITests.swift; sourceTree = "<group>"; };
 		098AAAB42ABC73CD003047B0 /* MathQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		098AAAC22ABC7434003047B0 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		098AAAC62ABC744C003047B0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		098AAA962ABC73CC003047B0 /* MathQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				098AAAC52ABC743F003047B0 /* Model */,
+				098AAAC12ABC7404003047B0 /* UI */,
 				098AAA972ABC73CC003047B0 /* MathQuizApp.swift */,
 				098AAA992ABC73CC003047B0 /* ContentView.swift */,
 				098AAA9B2ABC73CD003047B0 /* Assets.xcassets */,
@@ -125,6 +133,22 @@
 				098AAAB42ABC73CD003047B0 /* MathQuizUITestsLaunchTests.swift */,
 			);
 			path = MathQuizUITests;
+			sourceTree = "<group>";
+		};
+		098AAAC12ABC7404003047B0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				098AAAC22ABC7434003047B0 /* QuestionView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		098AAAC52ABC743F003047B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				098AAAC62ABC744C003047B0 /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				098AAA9A2ABC73CC003047B0 /* ContentView.swift in Sources */,
+				098AAAC72ABC744C003047B0 /* Question.swift in Sources */,
+				098AAAC32ABC7434003047B0 /* QuestionView.swift in Sources */,
 				098AAA982ABC73CC003047B0 /* MathQuizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				098AAAB52ABC73CD003047B0 /* MathQuizUITestsLaunchTests.swift in Sources */,
+				098AAAC82ABC744C003047B0 /* Question.swift in Sources */,
+				098AAAC42ABC7434003047B0 /* QuestionView.swift in Sources */,
 				098AAAB32ABC73CD003047B0 /* MathQuizUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
