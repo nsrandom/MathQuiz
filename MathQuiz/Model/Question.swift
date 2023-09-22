@@ -1,6 +1,6 @@
 import Foundation
 
-struct Question {
+struct Question: Hashable {
   var lhs: Int? = nil
   var rhs: Int? = nil
   var text: String
