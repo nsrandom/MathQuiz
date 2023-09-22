@@ -15,7 +15,18 @@ struct QuestionView: View {
         .font(font)
         .padding(.top, 30)
 
-      answerField()
+      TextField("", text: $attemptText)
+        .onChange(of: attemptText) { text in
+          withAnimation {
+            self.status = .attempting
+          }
+        }
+        .keyboardType(.numberPad)
+        .multilineTextAlignment(.center)
+        .font(font)
+        .border(.gray)
+        .padding([.leading, .trailing], 40)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
 
       checkButton()
 
@@ -25,7 +36,7 @@ struct QuestionView: View {
   }
 
   private func checkButton() -> some View {
-    Button(buttonText(status)) {
+    Button(status.buttonText()) {
       if let attempt = Int(attemptText) {
         attempts += 1
         withAnimation(.easeInOut) {
@@ -46,14 +57,6 @@ struct QuestionView: View {
     .foregroundColor(.white)
     .background(status.backgroundColor())
     .clipShape(Capsule())
-  }
-
-  private func buttonText(_ status: Status) -> String {
-    switch(status) {
-      case .attempting: return "Check"
-      case .correct: return "✓"
-      case .incorrect: return "Uh oh!"
-    }
   }
 
   private func answerField() -> some View {
@@ -79,6 +82,14 @@ struct QuestionView: View {
     case attempting
     case correct
     case incorrect
+
+    func buttonText() -> String {
+      switch(self) {
+        case .attempting: return "Check"
+        case .correct: return "✓"
+        case .incorrect: return "Uh oh!"
+      }
+    }
 
     func backgroundColor() -> Color {
       switch (self) {

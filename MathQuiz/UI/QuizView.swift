@@ -13,11 +13,12 @@ struct QuizView: View {
 
       QuestionView(question: questions[index]) { _, _ in
         if (index < questions.count - 1) {
-          withAnimation {
+          withAnimation(.easeInOut) {
             index += 1
           }
         }
       }
+      .id(index)
 
       Spacer()
     }
